@@ -16,6 +16,11 @@ const TodoList = ({todos, handleComplete}) => {
                                     Complete
                                 </button>
                         )}
+                        {todo.completed && (
+                            <span style={{marginLeft: "10px", color:"green"}}>
+                                Completed
+                            </span>
+                        )}
                         </li>
 
                 ))}
