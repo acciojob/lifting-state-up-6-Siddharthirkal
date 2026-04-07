@@ -7,7 +7,7 @@ const TodoList = ({todos, handleComplete}) => {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id} style={{margin: "10px 0"}}>
-                        {todo.task}
+                        <p>{todo.task}</p>
                         {!todo.completed && (
                             <button
                                 onClick={() => handleComplete(todo.id)}
