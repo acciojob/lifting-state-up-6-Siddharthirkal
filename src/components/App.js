@@ -12,17 +12,18 @@ const App = () => {
   ]);
   
   function handleComplete(id){
-    const updatedTodos = todos.map((todo) =>
-    todo.id === id? {...todo,completed: true} : todo
-  );
-  setTodos(updatedTodos);
-  }
+    setTodos((prevTodos) =>{
+      prevTodos.map((todo) =>
+        todo.id===id?{...todo,completed:true} : todo
+      )
+    });
+  };
 return (
   <div>
     <h1>Parent Component</h1>
     <TodoList todos={todos} handleComplete={handleComplete} />
   </div>
 );
-};
+}
 
 export default App
