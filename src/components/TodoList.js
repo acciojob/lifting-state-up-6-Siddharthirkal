@@ -18,6 +18,6 @@ const TodoList = ({ todos = [], handleComplete }) => {
       </ul>
     </div>
   );
-};
+}; 
 
 export default TodoList;
